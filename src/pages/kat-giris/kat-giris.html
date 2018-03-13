@@ -1,0 +1,13 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Giriş Kat</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="options"
+        style="height: 100%;"
+       leaflet
+       [leafletOptions]="options">
+  </div>
+</ion-content>
