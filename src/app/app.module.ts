@@ -4,7 +4,6 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
 
-import { ContactPage } from '../pages/contact/contact';
 import { KatGiris } from '../pages/kat-giris/kat-giris';
 import { TabsPage } from '../pages/tabs/tabs';
 
@@ -14,12 +13,15 @@ import {LeafletModule} from "@asymmetrik/ngx-leaflet";
 import {HttpClientModule} from "@angular/common/http";
 import {KatBir} from "../pages/kat-bir/kat-bir";
 import {KatBodrumPage} from "../pages/kat-bodrum/kat-bodrum";
+import {KatIkiPage} from "../pages/kat-iki/kat-iki";
+import {LeafletMapComponent} from "../components/leaflet-map/leaflet-map";
+import {ComponentsModule} from "../components/components.module";
 
 @NgModule({
   declarations: [
     MyApp,
     KatBir,
-    ContactPage,
+    KatIkiPage,
     KatGiris,
     KatBodrumPage,
     TabsPage
@@ -28,14 +30,16 @@ import {KatBodrumPage} from "../pages/kat-bodrum/kat-bodrum";
     BrowserModule,
     IonicModule.forRoot(MyApp),
     LeafletModule.forRoot(),
-    HttpClientModule
+    HttpClientModule,
+    ComponentsModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
+    KatGiris,
     KatBir,
+    KatIkiPage,
     KatBodrumPage,
-    ContactPage,
     KatGiris,
     TabsPage
   ],

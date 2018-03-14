@@ -1,6 +1,6 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Bodrum Kat</ion-title>
+    <ion-title>{{title}}</ion-title>
     <ion-buttons end>
       <button ion-button color="primary" (click)="zoomToLocation()">
         Zoom
@@ -10,7 +10,10 @@
       </button>
     </ion-buttons>
   </ion-navbar>
+
 </ion-header>
+
+
 <ion-content>
   <div *ngIf="options"
        style="height: 100%;"

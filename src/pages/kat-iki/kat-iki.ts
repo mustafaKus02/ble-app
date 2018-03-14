@@ -1,33 +1,31 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
-import {geoJSON, latLng, LatLng, MapOptions, tileLayer} from "leaflet";
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {geoJSON, latLng} from "leaflet";
 import {HttpClient} from "@angular/common/http";
 
 /**
- * Generated class for the KatBodrumPage page.
+ * Generated class for the KatIkiPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
 
-
+@IonicPage()
 @Component({
-  selector: 'page-kat-bodrum',
-  templateUrl: 'kat-bodrum.html',
+  selector: 'page-kat-iki',
+  templateUrl: 'kat-iki.html',
 })
-export class KatBodrumPage {
+export class KatIkiPage {
 
   alanData:any;
   yolData:any;
-  options:MapOptions;
-  zoom:number=18;
-  center:LatLng;
+  options:any;
 
   constructor(public navCtrl: NavController, http:HttpClient) {
-    http.get("assets/data/Alan_Kat1.json").subscribe(data=>{
+    http.get("assets/data/Alan_Kat2.json").subscribe(data=>{
       this.alanData=data;
 
-      http.get("assets/data/Yol_Kat1.json").subscribe(data=>{
+      http.get("assets/data/Yol_Kat2.json").subscribe(data=>{
         this.yolData=data;
         this.options = {
           layers: [
@@ -42,17 +40,5 @@ export class KatBodrumPage {
     })
   }
 
-
-
-
-
-  zoomToLocation(){
-    this.center=latLng(38,35);
-  }
-
-  fitGeoJSON(){
-    this.center=latLng( 38.766291,35.409356);
-    this.zoom=18;
-  }
 
 }

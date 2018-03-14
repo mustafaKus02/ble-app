@@ -1,11 +1,21 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      About
+      Birinci Kat
     </ion-title>
+    <ion-buttons end>
+      <button ion-button color="primary" (click)="zoomToLocation()">
+        Zoom
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
+  <div *ngIf="options"
+       style="height: 100%;"
+       leaflet
+       [leafletOptions]="options">
+  </div>
 
 </ion-content>
