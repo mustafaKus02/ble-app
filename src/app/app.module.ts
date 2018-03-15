@@ -14,8 +14,8 @@ import {HttpClientModule} from "@angular/common/http";
 import {KatBir} from "../pages/kat-bir/kat-bir";
 import {KatBodrumPage} from "../pages/kat-bodrum/kat-bodrum";
 import {KatIkiPage} from "../pages/kat-iki/kat-iki";
-import {LeafletMapComponent} from "../components/leaflet-map/leaflet-map";
 import {ComponentsModule} from "../components/components.module";
+import {BLE} from "@ionic-native/ble";
 
 @NgModule({
   declarations: [
@@ -46,7 +46,9 @@ import {ComponentsModule} from "../components/components.module";
   providers: [
     StatusBar,
     SplashScreen,
+    BLE,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
+
   ]
 })
 export class AppModule {}

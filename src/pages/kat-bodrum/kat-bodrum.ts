@@ -31,8 +31,8 @@ export class KatBodrumPage {
         this.yolData=data;
         this.options = {
           layers: [
-            geoJSON((this.alanData)),
-            geoJSON((this.yolData))
+            //geoJSON((this.alanData)),
+            //geoJSON((this.yolData))
           ],
           zoom: 17,
           center: latLng( 38.766291,35.409356)
@@ -41,10 +41,6 @@ export class KatBodrumPage {
 
     })
   }
-
-
-
-
 
   zoomToLocation(){
     this.center=latLng(38,35);
